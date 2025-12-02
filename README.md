@@ -21,9 +21,6 @@ This lesson guides you through the basics of file systems and the shell. If you 
 
 If you’re already comfortable manipulating files and directories, searching for files with `grep` and `find`, and writing simple loops and scripts, you probably want to skip this workshop. 
 
-## Course Outline
-
-{{< include _includes/syllabus.qmd >}}
 
 ## Credits and Acknowledgement
 
