@@ -1,0 +1,50 @@
+url: https://sanduni-p.github.io/shell-novice/
+project:
+  type: website
+
+website:
+  title: "The Unix Shell"
+  navbar:
+    left:
+      - href: index.html
+        text: Home
+      - text: Workshop Materials
+        menu:
+          - text: Introducing the Shell
+            href: episodes/01-intro.qmd
+          - text: Navigating the Filesystem
+            href: episodes/02-filedir.qmd
+          - text: Creating and Editing Files
+            href: episodes/03-create.qmd
+          - text: File Permissions
+            href: episodes/04-permissions.qmd
+          - text: Pipes and Filters
+            href: episodes/05-pipefilter.qmd
+          - text: Loops
+            href: episodes/06-loop.qmd
+          - text: Writing Shell Scripts
+            href: episodes/07-script.qmd
+          - text: Finding Files and Content
+            href: episodes/08-find.qmd
+          - text: Awk for Text Processing
+            href: episodes/09-awk.qmd
+        
+
+format:
+  html:
+    theme: 
+      - cerulean
+      - utils/css/custom.scss
+    toc: true
+    toc-expand: 1
+    toc-title: Contents
+    embed-resources: true
+    css: utils/css/custom.css
+    smooth-scroll: true
+    df-print: kable
+execute: 
+  freeze: auto
+jupyter: python3   
+
+metadata-files:
+  - _variables.yml
