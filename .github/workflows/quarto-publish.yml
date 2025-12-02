@@ -32,7 +32,7 @@ jobs:
           # Add any needed system deps here
       - name: Install R packages
         run: |
-          Rscript -e 'install.packages(c("knitr","rmarkdown"))'
+          Rscript -e 'install.packages(c("knitr","rmarkdown","yaml"))'
       - name: Render site
         run: quarto render
       - name: Upload artifact

@@ -6,7 +6,6 @@
 #| results: asis
 
 library(yaml)
-library(dplyr)
 
 # Function to extract metadata from a .qmd file
 extract_metadata <- function(file) {
