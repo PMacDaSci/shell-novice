@@ -13,23 +13,24 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.SYNC_TOKEN }}
 
       - name: Configure git
         run: |
           git config user.name "repo-sync-bot"
           git config user.email "repo-sync-bot@users.noreply.github.com"
 
-      - name: Add personal repo and fetch
+      - name: Fetch from personal (upstream)
         run: |
           git remote add upstream https://github.com/Sanduni-P/shell-novice.git
           git fetch upstream --prune --tags
 
-      - name: Fast-forward main branch
+      - name: Fast-forward org/main to personal/main
         run: |
           git checkout main
           git merge --ff-only upstream/main
-          git push https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/PMacDaSci/shell-novice.git main
+          git push origin main
 
       - name: Sync tags
         run: |
-          git push https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/PMacDaSci/shell-novice.git --tags
+          git push origin --tags
