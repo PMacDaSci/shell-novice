@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "*/59 * * * *"  # runs every 59 minutes
 
+permissions:
+  contents: write
+  
 jobs:
   sync:
     runs-on: ubuntu-latest
