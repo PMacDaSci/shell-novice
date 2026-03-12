@@ -3,7 +3,7 @@ name: Sync from personal repo
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/59 * * * *"  # runs every 59 minutes
+    - cron: '0 0 1 * *' # "*/59 * * * *"   runs every 59 minutes
 
 permissions:
   contents: write
